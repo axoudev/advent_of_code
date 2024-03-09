@@ -2,7 +2,7 @@ import requests
 import configparser
 
 config = configparser.ConfigParser()
-config.read(r'E:\workspace\advent_of_code\2015\5\part_1\config.ini')
+config.read(r'E:\workspace\advent_of_code\2015\day_5\part_1\config.ini')
 
 URL = 'http://adventofcode.com/2015/day/5/input'
 SESSION = config['DEFAULT']['session_id']

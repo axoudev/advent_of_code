@@ -2,7 +2,7 @@ import requests
 import configparser
 
 config = configparser.ConfigParser()
-config.read(r'E:\workspace\advent_of_code\2015\day_6\part_1\config.ini')
+config.read(r'E:\workspace\advent_of_code\config.ini')
 
 URL = 'http://adventofcode.com/2015/day/6/input'
 SESSION = config['DEFAULT']['session_id']
@@ -12,7 +12,7 @@ LIGHTS = [[0 for i in range(1000)] for j in range(1000)]
 def main():
     instructions = format_instructions(get_instructions());
     execute_instructions(instructions);
-    
+
     print(sum([sum(row) for row in LIGHTS]));
 
 def execute_instructions(instructions):
